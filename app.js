@@ -11,7 +11,9 @@ app.get("/calculator", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
-app.listen(3000, () => {
-  console.log("Calculator running on http://localhost:3000/calculator");
+app.listen(3000, "0.0.0.0", () => {
+  console.log("Calculator running on port 3000");
 });
+
+
 
