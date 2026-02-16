@@ -3,17 +3,14 @@ const path = require("path");
 
 const app = express();
 
-// static files (CSS, JS)
+// static files
 app.use(express.static(path.join(__dirname, "public")));
 
-// calculator page
-app.get("/calculator", (req, res) => {
+// change this 👇
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
-app.listen(3000, "0.0.0.0", () => {
-  console.log("Calculator running on port 3000");
+app.listen(4000, "0.0.0.0", () => {
+  console.log("Calculator running on port 4000");
 });
-
-
-
